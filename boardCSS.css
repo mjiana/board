@@ -1,0 +1,98 @@
+/*
+옅은 회색배경
+background-color: #ececec;
+background-color: #e2e2e2;
+짙은 회색배경
+background-color: #d9d9d9;
+background-color: #c9c9c9;
+하늘색 배경
+background-color: #b9f4ff;
+background-color: #93efff;
+노란색 배경
+background-color: #ffffd2;
+background-color: #ffffb0;
+*/
+table{
+	width: auto;
+	margin: auto;
+	text-align: center;
+	color: #4c4c4c;
+	FONT-FAMILY: 굴림,verdana,tahoma;
+	FONT-SIZE: 11pt; 
+	background-color: #ececec;
+	border-radius: 5px;
+}
+td{
+	width: auto;
+	min-width: 40px;
+}
+.t1{
+	background-color: #e2e2e2;
+	border-radius: 10px;
+}
+font {
+	size: 4px;
+	color: gray;
+}
+.f1{
+	size: 4px;
+	color: #ff4646;
+}
+.f2{
+	size: 4px;
+	color: blue;
+}
+input[type=text], input[type=password]{
+	text-align: left;
+	width: 300px;
+	border: 1px solid gray;
+	color: #535353;
+	FONT-FAMILY:inherit;
+}
+.txt1{
+	text-align: left;
+	width: 50px;
+	vertical-align: middle;
+	background-color: white;
+	color: #535353;
+	FONT-FAMILY:inherit;
+	LINE-HEIGHT: 150%;
+}
+input[type=button], input[type=reset]{
+	text-align: center;
+	width: auto;
+	vertical-align: middle;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 10px;
+	font-weight: bold;
+	color: #535353;
+	FONT-FAMILY:inherit;
+	LINE-HEIGHT: 150%;
+}
+textarea{
+	text-align: left;
+	width: 300px;
+	height: 200px;
+	FONT-FAMILY:inherit;
+	color: #535353;
+}
+select{
+	text-align: center;
+	width: auto;
+	vertical-align: middle;
+	border: 1px solid gray;
+	border-radius: 0px;
+	font-weight: lighter;
+	FONT-FAMILY:inherit;
+}
+a:link{ 
+	font-weight:bolder;
+	text-decoration: none; 
+	color: #4c4c4c;
+}
+a:hover, a:visited{
+	/* background-color:#d2d2d2; */
+	text-decoration:underline;
+	color: #4c4c4c;
+}
