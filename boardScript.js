@@ -34,7 +34,7 @@ function trans(theform){
 	theform.submit();
 }
 /**********************************************/
-/* list.jsp */
+/* list.jsp, search.jsp */
 function send(theform){
 	if(theform.search.value==""){
 		alert("검색어를 입력하세요.");
@@ -42,4 +42,12 @@ function send(theform){
 		return;
 	}
 	theform.submit();
+}
+/**********************************************/
+/* content.jsp */
+function editsend(idx){
+	location.href="edit.jsp?idx="+idx;
+}
+function delsend(idx){
+	location.href="del.jsp?idx="+idx;
 }

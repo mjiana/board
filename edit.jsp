@@ -4,15 +4,13 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>게시글 보기</title>
+<title>게시글 수정</title>
 <link rel="stylesheet" type="text/css" href="boardCSS.css">
 <script type="text/javascript" src="boardScript.js"></script>
 </head>
 <%
 int idx = Integer.parseInt(request.getParameter("idx"));
-//HitUp
 BoardQuery bq = new BoardQuery();
-bq.boardHitUp(idx);
 BoardBean bb = bq.boardView(idx);
 %>
 <body>
@@ -22,38 +20,41 @@ BoardBean bb = bq.boardView(idx);
 	</tr>
 </table>
 <br>
-<form method="post" name="wform">
+<form method="post" name="myform" action="edit_ok.jsp">
 <table>
 	<tr>
-		<td colspan="2">게시글 보기</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="right">조회수 : <%=bb.getHit() %></td>
+		<td colspan="2">게시글 수정</td>
 	</tr>
 	<tr>
 		<td class="t1">이름</td>
-		<td><%=bb.getName() %></td>
+		<td><input type="text" name="name" value="<%=bb.getName() %>"></td>
 	</tr>
 	<tr>
 		<td class="t1">이메일</td>
-		<td><%=bb.getEmail() %></td>
+		<td><input type="text" name="email" value="<%=bb.getEmail() %>"></td>
 	</tr>
 	<tr>
 		<td class="t1">홈페이지</td>
-		<td><%=bb.getHomepage() %></td>
+		<td><input type="text" name="homepage" value="<%=bb.getHomepage() %>"></td>
 	</tr>
 	<tr>
 		<td class="t1">제목</td>
-		<td><%=bb.getTitle() %></td>
+		<td><input type="text" name="title" value="<%=bb.getTitle() %>"></td>
 	</tr>
 	<tr>
 		<td class="t1">내용</td>
-		<td><%=bb.getContent() %></td>
+		<td><textarea name="content"><%=bb.getContent() %></textarea></td>
+	</tr>
+	<tr>
+		<td class="t1">암호</td>
+		<td><input type="password" name="pwd"></td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			<input type="button" class="btn1" value="수정하기" onclick="editsend(<%=bb.getIdx()%>)">
-			<input type="button" class="btn1" value="삭제하기" onclick="delsend(<%=bb.getIdx()%>)">
+		<input type="hidden" name="idx" value="<%=bb.getIdx()%>">
+		<input type="button" class="btn1" value="수정하기" onclick="trans(this.form)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" class="btn1" value="다시쓰기">
 		</td>
 	</tr>
 </table>
@@ -61,7 +62,7 @@ BoardBean bb = bq.boardView(idx);
 <br>
 <table>
 	<tr>
-		<td>[<a href="./list.jsp">리스트</a>]</td>
+		<td>[<a href="./content.jsp?idx=<%=bb.getIdx()%>">돌아가기</a>]</td>
 	</tr>
 </table>
 </body>

@@ -41,7 +41,7 @@ else pagelink = Integer.parseInt(pagelink_get);
 	<tr>
 		<td class="t1">번호</td>
 		<td class="t1">일자</td>
-		<td class="t1">제목</td>
+		<td class="t2">제목</td>
 		<td class="t1">이름</td>
 		<td class="t1">조회</td>
 	</tr>

@@ -15,7 +15,7 @@
 	</tr>
 </table>
 <br>
-<form method="post" action="write_ok.jsp" name="wform">
+<form method="post" action="BoardWriteCk.jsp" name="wform">
 <table>
 	<tr>
 		<td colspan="2">새 글 쓰기</td>

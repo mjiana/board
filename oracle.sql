@@ -1,7 +1,7 @@
 -- 게시판용 테이블 생성(2021.05.20)
 create table board2 (
 	idx int primary key,
-	name varchar(10),
+	name varchar(10), -- 20으로 변경
 	email varchar(50),
 	homepage varchar(50),
 	title varchar(50),
@@ -11,7 +11,7 @@ create table board2 (
 	hit int 
 ); 
 -- 삭제할때 drop table board2;
-
+alter table board2 modify(name varchar(30));
 -- sequence : 자동증가번호를 생성하는 객체
 create sequence board2_idx_seq increment by 1 start with 1;
 -- 삭제할때 drop sequence board2_idx_seq;

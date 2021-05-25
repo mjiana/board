@@ -12,8 +12,12 @@ background-color: #93efff;
 background-color: #ffffd2;
 background-color: #ffffb0;
 */
+.right{
+	text-align: right;
+}
 table{
 	width: auto;
+	min-width: 200px;
 	margin: auto;
 	text-align: center;
 	color: #4c4c4c;
@@ -24,9 +28,14 @@ table{
 }
 td{
 	width: auto;
-	min-width: 40px;
+	min-width: 60px;
 }
 .t1{
+	background-color: #e2e2e2;
+	border-radius: 10px;
+}
+.t2{
+	width: 250px;
 	background-color: #e2e2e2;
 	border-radius: 10px;
 }
@@ -37,10 +46,6 @@ font {
 .f1{
 	size: 4px;
 	color: #ff4646;
-}
-.f2{
-	size: 4px;
-	color: blue;
 }
 input[type=text], input[type=password]{
 	text-align: left;
@@ -58,7 +63,16 @@ input[type=text], input[type=password]{
 	FONT-FAMILY:inherit;
 	LINE-HEIGHT: 150%;
 }
-input[type=button], input[type=reset]{
+.txt2{
+	text-align: left;
+	width: 30px;
+	vertical-align: middle;
+	background-color: white;
+	color: #535353;
+	FONT-FAMILY:inherit;
+	LINE-HEIGHT: 150%;
+}
+input[type=button], input[type=reset], input[type=submit]{
 	text-align: center;
 	width: auto;
 	vertical-align: middle;
@@ -81,8 +95,7 @@ select{
 	text-align: center;
 	width: auto;
 	vertical-align: middle;
-	border: 1px solid gray;
-	border-radius: 0px;
+	
 	font-weight: lighter;
 	FONT-FAMILY:inherit;
 }
